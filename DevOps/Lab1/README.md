@@ -101,10 +101,6 @@ sudo service nginx restart
 
 При помощи mkdir создаем еще больше каталогов внутри каталогов. В последних создаем еще по одному html-файлику.
 
-Вот пример для imfine.local:
-
-![Создаем каталоги](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/happyhappyhappy.jpg)
-
 Теперь добавляем alias в конфиги:
 
 ![alias1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/alias_conf1.png)
