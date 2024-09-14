@@ -30,7 +30,7 @@ sudo apt install nginx
 
 При помощи mkdir создаем две директории: /var/www/imfine и /var/www/imreallyfine (скринов нет потому что у нас лапки)
 
-Внутри директорий создаем файлики happy.html, это будующие конфиги.
+Внутри директорий создаем файлики index.html, это будующие конфиги.
 Открываем файлики:
 ```bash
 sudo nano /etc/nginx/sites-available/imfine
@@ -41,7 +41,16 @@ sudo nano /etc/nginx/sites-available/imreallyfine
 Теперь заполняем их:
 ![Содержимое конфига](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/configs%201.png)
 
+#### тратата
 
+Переводим наши сайты в состояние enabled (включаем их??)
+```bash
+sudo ln -s /etc/nginx/sites-available/imfine  /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/imreallyfine  /etc/nginx/sites-enabled/
+```
+
+Настраивать связь с DNS-сервером не входило в наши планы, а потому в хосты на нашем компьютере добавим домены сайтов. В файле /etc/hosts пишем айпи нашего сервера и требуемые домены: imfine.local и imreallyfine.local.
+![Хосты](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/hosts.png)
 
 
 
