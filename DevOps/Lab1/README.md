@@ -43,25 +43,39 @@ sudo nano /etc/nginx/sites-available/imreallyfine
 
 #### тратата
 
-Переводим наши сайты в состояние enabled (включаем их??)
+Чтобы nginx смог обслуживать наши сайты мы создаем символические ссылки на файлы конфигурации imfine и imreallyfine в /etc/nginx/sites-enabled/.
 ```bash
 sudo ln -s /etc/nginx/sites-available/imfine  /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/imreallyfine  /etc/nginx/sites-enabled/
 ```
 
-Настраивать связь с DNS-сервером не входило в наши планы, а потому в хосты на нашем компьютере добавим домены сайтов. В файле /etc/hosts пишем айпи нашего сервера и требуемые домены: imfine.local и imreallyfine.local.
-![Хосты](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/hosts.png)
-
-Чтобы все изменения в конфигах точно применились, перезапускаем nginx с помощью 
+Затем рестартим nginx с помощью команды
 ```bash
 sudo service nginx restart
 ```
 
+Настраивать связь с DNS-сервером не входило в наши планы, а потому в хосты на нашем компьютере добавим домены сайтов. В файле /etc/hosts пишем айпи нашего сервера и требуемые домены: imfine.local и imreallyfine.local.
+
+![Хосты](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/hosts.png)
+
 Теперь откроем наши странички и посмотрим.
+
 ![imfine](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/imfine%20http.jpg)
 ![imreallyfine](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/imreallyfine%20http.jpg)
 
-На этом этапе наши странички уже открываются через http.
+На этом этапе наши сайты уже открываются через http.
+
+#### Работаем с сертификатами
+
+Разумеется, чтобы получить хороший сертификат от центра сертификации, нужно сгенерировать запрос на подпись сертификата, выбрать центр сертификации, отправить туда запрос. И после проверки мы сможем получить и установить сертификат.
+
+Это, конечно, все круто и здорово. Но мы пойдем другим путем, а именно сделаем самоподписанные сертификаты)
+
+Генерируем самоподписанные сертификаты сроком действия на 365 дней и закрытые ключи к ним, ключи не шифруем с надеждой на то, что наши сайты никому не нужны...(пожалуйста не взламывайте, мы и так скажем всю информацию добровольно)
+
+![Генерация сертификата и ключа](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/certificates%20and%20keys.jpg)
+
+
 
 
 
