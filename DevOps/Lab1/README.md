@@ -83,7 +83,7 @@ sudo service nginx restart
 
 ![Конфиг https2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/imreallyfine%20https.jpg)
 
-И видиииим:
+И вииииидим:
 
 ![Сюда ходить опасно](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/warning.jpg)
 
@@ -96,3 +96,10 @@ sudo service nginx restart
 ![Все работает 1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/https%20working2.jpg)
 
 ![Все работает 2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/https%20working1.jpg)
+
+#### Настраиваем alias
+
+При помощи mkdir создаем еще больше каталогов внутри каталогов. В последних создаем еще по одному html-файлику.
+Вот пример для imfine.local:
+
+![Создаем каталоги](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/happyhappyhappy.jpg)
