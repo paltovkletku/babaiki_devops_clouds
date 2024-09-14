@@ -22,3 +22,19 @@ sudo apt-get update
 sudo apt install nginx
 ```
 ![Установка Nginx](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/install%20nginx.jpg)
+
+Проверяем подключение Nginx чреез ip-адрес:
+![Рабочий nginx через ip](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/welcome.jpg)
+
+#### Создаем файлики, с которыми будем работать
+
+При помощи mkdir создаем две директории: /var/www/imfine и /var/www/imreallyfine (скринов нет потому что у нас лапки)
+
+Внутри директорий создаем файлики happy.html, это будующие конфиги.
+Теперь заполняем их:
+![Содержимое конфига](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/configs%201.png)
+
+
+
+
+
