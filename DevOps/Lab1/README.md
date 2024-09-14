@@ -113,4 +113,9 @@ sudo service nginx restart
 
 ![i love linux](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/i%20love%20linux.jpg)
 
+Наша лаба готова))) уррааа, мы отдыхать
+
+А чтобы было веселее читать отчет, листайте дальше
+
+![i love linux](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/i%20love%20linux.jpg)
 
