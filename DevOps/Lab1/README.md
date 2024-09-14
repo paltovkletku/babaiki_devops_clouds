@@ -31,6 +31,13 @@ sudo apt install nginx
 При помощи mkdir создаем две директории: /var/www/imfine и /var/www/imreallyfine (скринов нет потому что у нас лапки)
 
 Внутри директорий создаем файлики happy.html, это будующие конфиги.
+Открываем файлики:
+```bash
+sudo nano /etc/nginx/sites-available/imfine
+```
+```bash
+sudo nano /etc/nginx/sites-available/imreallyfine
+```
 Теперь заполняем их:
 ![Содержимое конфига](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/configs%201.png)
 
