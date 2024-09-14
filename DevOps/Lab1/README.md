@@ -52,5 +52,17 @@ sudo ln -s /etc/nginx/sites-available/imreallyfine  /etc/nginx/sites-enabled/
 Настраивать связь с DNS-сервером не входило в наши планы, а потому в хосты на нашем компьютере добавим домены сайтов. В файле /etc/hosts пишем айпи нашего сервера и требуемые домены: imfine.local и imreallyfine.local.
 ![Хосты](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/hosts.png)
 
+Чтобы все изменения в конфигах точно применились, перезапускаем nginx с помощью 
+```bash
+sudo service nginx restart
+```
+
+Теперь откроем наши странички и посмотрим.
+![imfine](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/imfine%20http.jpg)
+![imreallyfine](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/imreallyfine%20http.jpg)
+
+На этом этапе наши странички уже открываются через http.
+
+
 
 
