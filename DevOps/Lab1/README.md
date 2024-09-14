@@ -41,7 +41,7 @@ sudo nano /etc/nginx/sites-available/imreallyfine
 Теперь заполняем их:
 ![Содержимое конфига](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/configs%201.png)
 
-#### тратата
+#### Настраиваем
 
 Чтобы nginx смог обслуживать наши сайты мы создаем символические ссылки на файлы конфигурации imfine и imreallyfine в /etc/nginx/sites-enabled/.
 ```bash
@@ -100,6 +100,21 @@ sudo service nginx restart
 #### Настраиваем alias
 
 При помощи mkdir создаем еще больше каталогов внутри каталогов. В последних создаем еще по одному html-файлику.
+
 Вот пример для imfine.local:
 
 ![Создаем каталоги](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/happyhappyhappy.jpg)
+
+Теперь добавляем alias в конфиги:
+
+![alias1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/alias_conf1.png)
+
+![alias2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/alias_conf2.png)
+
+Мы создали псевдонимы, теперь откроем сайты
+
+![i love labs](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/i%20love%20labs.jpg)
+
+![i love linux](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/i%20love%20linux.jpg)
+
+
