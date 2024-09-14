@@ -77,7 +77,13 @@ sudo service nginx restart
 
 #### Перенаправление запросов
 
-Теперь редактируем наши конфиги. Нам нужно принудительно перенаправить запросы с 80 порта на 443. И видиииим:
+Теперь редактируем наши конфиги. Нам нужно принудительно перенаправить запросы с 80 порта на 443.
+
+![Конфиг https1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/imfine%20https.jpg)
+
+![Конфиг https2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/imreallyfine%20https.jpg)
+
+И видиииим:
 
 ![Сюда ходить опасно](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/warning.jpg)
 
