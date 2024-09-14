@@ -12,7 +12,13 @@
 ### Давайте постепенно разбираться
 
 #### Устанавливаем Nginx
-Через терминал, используя команду
+Обновим пакеты и установим Nginx, используя команды
 ```bash
+sudo apt-get update
 ```
+![Обновление пакетов](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/apt-get.jpg)
 
+```bash
+sudo apt install nginx
+```
+![Установка Nginx](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/install%20nginx.jpg)
