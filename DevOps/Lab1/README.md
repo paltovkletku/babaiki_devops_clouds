@@ -75,8 +75,18 @@ sudo service nginx restart
 
 ![Генерация сертификата и ключа](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/certificates%20and%20keys.jpg)
 
+#### Перенаправление запросов
 
+Теперь редактируем наши конфиги. Нам нужно принудительно перенаправить запросы с 80 порта на 443. И видиииим:
 
+![Сюда ходить опасно](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/warning.jpg)
 
+Но нас это нее останавливает...
 
+![Но мы пойдем сюда](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/not%20stop.jpg)
 
+Поэтому...
+
+![Все работает 1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/https%20working2.jpg)
+
+![Все работает 2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab1/https%20working1.jpg)
