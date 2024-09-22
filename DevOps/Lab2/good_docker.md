@@ -1,5 +1,9 @@
 FROM ubuntu:22.04
 
-COPY /lab2/happy.bash
+WORKDIR /lab2
 
-CMD ["bash", "happy.bash"]
+COPY happy.bash .
+
+ENTRYPOINT ["bash"]
+
+CMD ["happy.bash"]
