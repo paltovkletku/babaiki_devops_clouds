@@ -79,6 +79,8 @@ ADD https://raw.githubusercontent.com/paltovkletku/babaiki_devops_clouds/main/De
 CMD ["bash", "happy.bash"]
 ```
 
+![плохой докерфайл](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2/images/bad.jpg)
+
 Bad practices:
 
 1. Использование ubuntu:latest в качестве базового образа.
@@ -107,5 +109,6 @@ ENTRYPOINT ["bash"]
 CMD ["happy.bash"]
 ```
 
+![хороший докерфайл](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2/images/good.jpg)
 
 ## "Bad practices" по работе с контейнерами
