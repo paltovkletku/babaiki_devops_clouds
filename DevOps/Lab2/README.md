@@ -17,16 +17,6 @@ sudo apt update
 ```bash
 sudo apt install curl software-properties-common ca-certificates apt-transport-https -y
 ```
-curl — необходим для работы с веб-ресурсами;
-
-software-properties-common — пакет для управления ПО с помощью скриптов;
-
-ca-certificates — содержит информацию о центрах сертификации;
-
-apt-transport-https — необходим для передачи данных по протоколу HTTPS.
-
-Флаг -y означает, что на все вопросы терминала ответом будет «Да».
-
 Импортируем GPG-ключ
 ```bash
 wget -O- https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo tee /etc/apt/keyrings/docker.gpg > /dev/null
