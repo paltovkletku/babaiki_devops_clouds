@@ -43,9 +43,6 @@ sudo apt update
 apt-cache policy docker-ce
 ```
 
-Результат проверки:
-![проверка правильного репо](ссылка)
-
 Устанавливаем Docker
 ```bash
 sudo apt install docker-ce -y
@@ -57,8 +54,7 @@ sudo systemctl status docker
 ```
 
 Результат проверки:
-![проверка статуса докера](ссылка)
-
+![проверка статуса докера](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2/images/docker%20running.jpg)
 
 
 ## Написание "плохого" Dockerfile
