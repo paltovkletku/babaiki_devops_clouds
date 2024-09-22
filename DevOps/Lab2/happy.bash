@@ -1,1 +1,1 @@
-echo "¯\_(ツ)_/¯"
+echo "Save our souls"
