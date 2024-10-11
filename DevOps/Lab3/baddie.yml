@@ -1,0 +1,26 @@
+name: Bad CI/CD #название файла
+
+on: #триггер, запускающий работы - пуш в ветку main
+  push:
+    branches:
+      - main
+
+jobs: #работы 
+  build-and-deploy: #имя работы
+    runs-on: ubuntu-latest #на чем запускаем
+    steps: # теперь описываем пошаговый план работы
+      - name: Checkout #названия шагов
+        uses: actions/checkout@v3 #действие, используемое на шаге (чем отличается от run?). Конкретно здесь: checks out your repository code in the workflow environment
+
+      - name: Install deps
+        run: npm install # запуск команды Здесь: устанавливаем зависимости
+
+      - name: Test
+        run: npm run test #запускаем тесты для проекта
+
+      - name: Build
+        run: npm run build # сборка
+
+      - name: Deploy
+        run: |
+           rsync -avz --delete ./dist/ user@server_ip:/var/www/html/
