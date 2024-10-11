@@ -24,3 +24,7 @@ jobs: #работы
       - name: Deploy
         run: |
            rsync -avz --delete ./dist/ user@server_ip:/var/www/html/
+
+
+#ошибки: ubuntu:latest (потому что потому), обработка ошибок - отсутствует, нет кеширования, зависимости установлены без уточнения версии, билд и деплой объединены, Using --force with npm install: This can lead to unexpected behavior and dependencies being installed with incorrect versions.
+Using --prod with npm run build: This can lead to unexpected behavior and the build process not being reproducible, щас бы показывать где все файлы лежат (hardcode), install npm
