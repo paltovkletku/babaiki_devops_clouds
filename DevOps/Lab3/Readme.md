@@ -19,7 +19,7 @@ CD: доставляем фичу до конечного пользовател
 
 ## 2 Плохой ci/cd
 
-```bash
+```
 name: Bad CI/CD #название файла
 
 on: #триггер, запускающий работы - пуш в ветку main
@@ -68,9 +68,62 @@ Bad practices:
 
 
 
-## 3
+## Хороший ci/cd
+
+```
+name: Good CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v3
+
+        - name: Cache dependencies
+        uses: actions/cache@v2
+        id: cache
+        cache: npm
+        path: ~/.npm
+
+        - name: Install deps
+        uses: actions/npm-install@v1
+        cache: ${{ steps.cache.outputs.cache }}
+        npm-version: '14.17.0'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: build
+    steps:
+      - name: Deploy
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          USERNAME: ${{ secrets.USERNAME }}
+          DEPLOYMENT_PATH: ${{ secrets.DEPLOYMENT_PATH }}
+        run: |
+          rsync -avz --delete ./dist/ $USERNAME@$SERVER_IP:$DEPLOYMENT_PATH
+```
 
 Изменения:
+1. Разделение build и deploy. Разделив сборку и развертывание на отдельные задания, мы обеспечиваем более надежный, гибкий и масштабируемый конвейер CI/CD.
+2. Теперь будет всегда использоваться Ubuntu 20.04 - определенная версия образа ubuntu, которая не изменится без нашего ведома.
+3. Добавление кэширования.
+4. Установление зависимостей.
+5. Определение переменных окружения.
 
 ## 4
 
