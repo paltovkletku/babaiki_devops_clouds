@@ -21,7 +21,8 @@ jobs:
         - name: Install deps
         uses: actions/npm-install@v1
         cache: ${{ steps.cache.outputs.cache }}
-        npm-version: '14.17.0'
+        with:
+          npm-version: '14.17.0'
 
       - name: Install deps
         run: npm ci --ignore-scripts
