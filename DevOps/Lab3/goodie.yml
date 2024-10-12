@@ -14,10 +14,11 @@ jobs:
 
         - name: Cache dependencies
         uses: actions/cache@v3
-        id: cache
-        cache: npm-dependencies
-        path: ~/.npm
-
+        with:
+          cache: npm-dependencies
+          path: ~/.npm
+          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
+       
         - name: Install deps
         uses: actions/npm-install@v1
         cache: ${{ steps.cache.outputs.cache }}
