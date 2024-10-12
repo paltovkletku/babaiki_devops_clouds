@@ -20,10 +20,9 @@ jobs:
           key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
        
         - name: Install deps
-        uses: actions/npm-install@v1
-        cache: ${{ steps.cache.outputs.cache }}
-        with:
-          npm-version: '14.17.0'
+          uses: actions/npm-install@v1
+          with:
+            npm-version: '14.17.0'
 
       - name: Install deps
         run: npm ci --ignore-scripts
