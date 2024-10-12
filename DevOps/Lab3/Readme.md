@@ -122,5 +122,9 @@ jobs:
 
 ![оно того стоит?](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D0%B1%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.jpg)
 
+
+
+![помогите](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpg)
+
 Выполнили: Борисевич Анна, Ходакова Мария.
 
