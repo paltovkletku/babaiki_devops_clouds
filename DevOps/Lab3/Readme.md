@@ -76,15 +76,15 @@ jobs:
 
       - name: Cache dependencies
         uses: actions/cache@v3
+        id: cache-id
         with:
           cache: npm-dependencies
           path: ~/.npm
           key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Install deps
-        uses: actions/npm-install@v1
-        cache: ${{ steps.cache.outputs.cache }}
-        npm-version: '14.17.0'
+      - name: Install dependencies
+        if: steps.cache-id.outputs.cache-hit != 'true'
+        run: npm ci
 
       - name: Test
         run: npm run test
