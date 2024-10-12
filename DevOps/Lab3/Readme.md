@@ -22,22 +22,17 @@ CD: доставляем фичу до конечного пользовател
 ```
 name: Bad CI/CD #название файла
 
-on: #триггер, запускающий работы - пуш в ветку main
+on:
   push:
     branches:
       - main
 
-jobs: #работы 
-  build-and-deploy: #имя работы
-    runs-on: ubuntu-latest #на чем запускаем
-    steps: # теперь описываем пошаговый план работы
-      - name: Checkout #названия шагов
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
         uses: actions/checkout@v3
-#действие, используемое на шаге (чем отличается от run?). Конкретно здесь: checks out your repository code in the workflow environment
-# Используя uses, вы по сути говорите: «Эй, я хочу использовать это готовое действие для
-выполнения определенной задачи». usesКлючевое слово позволяет вам использовать возможности
-повторно используемых действий, что может упростить ваш рабочий процесс и сократить усилия
-по обслуживанию.
 
       - name: Install deps
         run: npm install # запуск команды Здесь: устанавливаем зависимости
