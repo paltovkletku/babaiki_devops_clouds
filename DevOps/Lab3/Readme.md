@@ -38,10 +38,9 @@ jobs:
         run: npm install
 
       - name: Test
-        run: npm run test #запускаем тесты для проекта
-
+        run: npm run test
       - name: Build
-        run: npm run build # сборка
+        run: npm run build
 
       - name: Deploy
         run: |
