@@ -128,6 +128,8 @@ jobs:
 
 ![лабы](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D0%BB%D0%B0%D0%B1%D1%8B.jpg)
 
+![шутка](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D1%88%D1%83%D1%82%D0%BA%D0%B0.jpg)
+
 
 
 
