@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install deps
-        run: npm install # запуск команды Здесь: устанавливаем зависимости
+        run: npm install
 
       - name: Test
         run: npm run test #запускаем тесты для проекта
