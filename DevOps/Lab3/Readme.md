@@ -49,13 +49,6 @@ jobs:
            rsync -avz --delete ./dist/ user@server_ip:/var/www/html/
 ```
 
-```
-
-Using --force with npm install: This can lead to unexpected behavior and dependencies being installed with incorrect versions.
-Using --prod with npm run build: This can lead to unexpected behavior and the build process not being reproducible, щас бы показывать где все файлы лежат (hardcode), install npm
-
-```
-
 Bad practices:
 1. Использование ubuntu:latest. latest подразумевает использование последнего доступного образа ubuntu, то есть он может меняться со временем, что может вызвать проблемы.
 2. Отсутствует обработка ошибок. Команды run не обрабатывают ошибки, если команда не выполняется, конвейер продолжит выполняться без остановки. Есть вероятность, что deploy будет выполнен несмотря на то, что build не выполнится. Все заруинится, такое нам не надо
