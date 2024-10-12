@@ -1,30 +1,25 @@
-name: Bad CI/CD #название файла
-
-on: #триггер, запускающий работы - пуш в ветку main
+name: Bad CI/CD 
+on: 
   push:
     branches:
       - main
 
-jobs: #работы 
-  build-and-deploy: #имя работы
-    runs-on: ubuntu-latest #на чем запускаем
-    steps: # теперь описываем пошаговый план работы
-      - name: Checkout #названия шагов
-        uses: actions/checkout@v3 #действие, используемое на шаге (чем отличается от run?). Конкретно здесь: checks out your repository code in the workflow environment
+jobs: 
+  build-and-deploy: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Checkout 
+        uses: actions/checkout@v3
 
       - name: Install deps
-        run: npm install # запуск команды Здесь: устанавливаем зависимости
+        run: npm install
 
       - name: Test
-        run: npm run test #запускаем тесты для проекта
+        run: npm run test 
 
       - name: Build
-        run: npm run build # сборка
+        run: npm run build
 
       - name: Deploy
         run: |
            rsync -avz --delete ./dist/ user@server_ip:/var/www/html/
-
-
-#ошибки: ubuntu:latest (потому что потому), обработка ошибок - отсутствует, нет кеширования, зависимости установлены без уточнения версии, билд и деплой объединены, Using --force with npm install: This can lead to unexpected behavior and dependencies being installed with incorrect versions.
-Using --prod with npm run build: This can lead to unexpected behavior and the build process not being reproducible, щас бы показывать где все файлы лежат (hardcode), install npm
