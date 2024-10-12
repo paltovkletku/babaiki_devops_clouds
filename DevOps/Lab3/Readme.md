@@ -5,6 +5,8 @@
 2. Написать “хороший” CI/CD, в котором эти плохие практики исправлены;
 3. В Readme описать каждую из плохих практик в плохом файле, почему она плохая и как в хорошем она была исправлена, как исправление повлияло на результат.
 
+![помогите](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpg)
+
 ## CI/CD - что это?..
 
 CI - Continuous Integration
@@ -124,7 +126,7 @@ jobs:
 
 
 
-![помогите](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpg)
+
 
 Выполнили: Борисевич Анна, Ходакова Мария.
 
