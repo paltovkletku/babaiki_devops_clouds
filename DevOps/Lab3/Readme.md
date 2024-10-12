@@ -34,7 +34,10 @@ jobs: #работы
       - name: Checkout #названия шагов
         uses: actions/checkout@v3
 #действие, используемое на шаге (чем отличается от run?). Конкретно здесь: checks out your repository code in the workflow environment
-# Используя uses, вы по сути говорите: «Эй, я хочу использовать это готовое действие для выполнения определенной задачи». usesКлючевое слово позволяет вам использовать возможности повторно используемых действий, что может упростить ваш рабочий процесс и сократить усилия по обслуживанию.
+# Используя uses, вы по сути говорите: «Эй, я хочу использовать это готовое действие для
+выполнения определенной задачи». usesКлючевое слово позволяет вам использовать возможности
+повторно используемых действий, что может упростить ваш рабочий процесс и сократить усилия
+по обслуживанию.
 
       - name: Install deps
         run: npm install # запуск команды Здесь: устанавливаем зависимости
@@ -48,10 +51,13 @@ jobs: #работы
       - name: Deploy
         run: |
            rsync -avz --delete ./dist/ user@server_ip:/var/www/html/
+```
 
+```
 
 Using --force with npm install: This can lead to unexpected behavior and dependencies being installed with incorrect versions.
 Using --prod with npm run build: This can lead to unexpected behavior and the build process not being reproducible, щас бы показывать где все файлы лежат (hardcode), install npm
+
 ```
 
 Bad practices:
