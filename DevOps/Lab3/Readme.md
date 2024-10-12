@@ -124,6 +124,10 @@ jobs:
 
 ![оно того стоит?](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D0%B1%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0.jpg)
 
+![хабр](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D1%85%D0%B0%D0%B1%D1%80.jpg)
+
+![лабы](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab3/images/%D0%BB%D0%B0%D0%B1%D1%8B.jpg)
+
 
 
 
