@@ -24,15 +24,19 @@ jobs:
         if: steps.cache-id.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Test
-        run: npm run test
-
       - name: Build
         run: npm run build
 
-  deploy:
+  test:
     runs-on: ubuntu-20.04
     needs: build
+    steps:
+      - name: Run tests
+          run: npm run test
+
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: test
     steps:
       - name: Deploy
         env:
