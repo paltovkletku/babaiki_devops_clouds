@@ -98,6 +98,7 @@ ENTRYPOINT ["bash"]
 CMD ["happy.bash"]
 ```
 Строим:
+
 ![хороший докерфайл build](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2/images/good.jpg)
 
 Запускаем:
