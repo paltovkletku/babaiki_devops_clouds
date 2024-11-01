@@ -87,8 +87,7 @@ FROM ubuntu:22.04
 WORKDIR /lab2
 
 RUN apt-get update &&
-apt-get install -y vim &&
-apt-get install -y curl &&
+apt-get install -y vim curl &&
 apt-get clean &&
 rm -rf /var/lib/apt/lists/*
 
