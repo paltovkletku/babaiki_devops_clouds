@@ -45,3 +45,5 @@
 8. AWS Directory Service
 
 В результате у нас получилась полностью заполненная [таблица](https://docs.google.com/spreadsheets/d/1FpPnP_CXwTCD8wx2skNZPr82IrqADqhgoea5a_wrjYI/edit?gid=0#gid=0) 
+
+![Итоговые данные](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/Clouds/Lab1/media/%D0%B8%D1%82%D0%BE%D0%B3.png)
