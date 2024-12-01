@@ -24,3 +24,24 @@
 
 ![Исходные данные](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/Clouds/Lab1/media/%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5.png)
 
+
+Входящие данные были сопоставлены с документацией AWS, а также с других источников в Интернете.
+
+### Описание сервисов:
+1. Amazon Translate
+   
+2. Amazon S3
+   
+3. Amazon Redshift
+   
+4. Amazon Simple Notification Service
+   
+5. AWS CodePipeline
+    
+6. AWS CodeBuild
+    
+7. Amazon Machine Learning
+
+8. AWS Directory Service
+
+В результате у нас получилась полностью заполненная [таблица](https://docs.google.com/spreadsheets/d/1FpPnP_CXwTCD8wx2skNZPr82IrqADqhgoea5a_wrjYI/edit?gid=0#gid=0) 
