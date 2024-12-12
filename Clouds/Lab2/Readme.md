@@ -76,7 +76,7 @@ Azure Sentinel - сервис информационной безопаснос�
 
 
 
-В результате у нас получилась полностью заполненная ![таблица](https://docs.google.com/spreadsheets/d/194KKOtGWwIgUhYU8fmLR3m28ggCNYdMv6IxVeHKXzgs/edit?usp=sharing)
+В результате у нас получилась полностью заполненная [таблица](https://docs.google.com/spreadsheets/d/194KKOtGWwIgUhYU8fmLR3m28ggCNYdMv6IxVeHKXzgs/edit?usp=sharing)
 
 
 
