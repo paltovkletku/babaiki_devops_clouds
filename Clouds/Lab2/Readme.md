@@ -79,6 +79,11 @@
 В результате у нас получилась полностью заполненная [таблица](https://docs.google.com/spreadsheets/d/194KKOtGWwIgUhYU8fmLR3m28ggCNYdMv6IxVeHKXzgs/edit?usp=sharing)
 
 
+
+
 ## Вывод
 
 В результате выполнения лабораторной работы мы получили навыки аналитики и понимание спектра публичных облачных сервисов без привязки к вендору.
+
+
+![айсберг](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/Clouds/Lab2/media/%D0%B0%D0%B9%D1%81%D0%B1%D0%B5%D1%80%D0%B3.jpg)
