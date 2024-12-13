@@ -79,6 +79,7 @@
 
 
 
+![результат](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/Clouds/Lab2/media/image.png)
 
 ## Вывод
 
