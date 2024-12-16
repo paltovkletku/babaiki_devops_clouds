@@ -103,7 +103,7 @@ secrets:
 ```
 services:
   web:
-    image: nginx:latest
+    image: nginx:1.21
     ports:
       - "8080:80"
     environment:
