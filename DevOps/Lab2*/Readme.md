@@ -63,7 +63,9 @@ volumes:
 
 Самое время подумать, что было не так...
 
-1. Кажется, кто-то забыл/не подумал, что могут быть разные версии nginx и mysql... так не делаем, нужно указать конкретную, чтобы избежать неприятных сюрпризов в поведении приложений при обновлении образов. Запомним: надо указать версии в хорошем docker compose.
+1. Кажется, кто-то забыл/не подумал, что могут быть разные версии nginx и mysql... так не делаем, нужно указать конкретную, чтобы избежать неприятных сюрпризов в поведении приложений при обновлении образов.
+  
+   Запомним: надо указывать версии в хорошем docker compose.
 
 ![а-ой](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C.jpg)
 
@@ -80,3 +82,49 @@ volumes:
 ![секрет](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82.png)
 
 4. Для хранения конфедециальной информации давайте будем использовать docker secrets
+
+Создаем директорию
+
+![дир](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82%D1%8B-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE.jpg)
+
+А теперь, оглядываясь на все недочеты и предложения по исправлению, пишем хороший docker compose:
+
+```bash
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    environment:
+      NGINX_HOST: localhost
+      NGINX_PORT: 80
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD_FILE: /run/secrets/mysql_user_password
+    networks:
+      - db_network
+    secrets:
+      - mysql_root_password
+      - mysql_user_password
+
+  cache:
+    image: redis:alpine
+    networks:
+      - cache_network
+
+networks:
+  db_network:
+  cache_network:
+
+secrets:
+  mysql_root_password:
+    file: ./secrets/mysql_root_password.txt
+  mysql_user_password:
+    file: ./secrets/mysql_user_password.txt
+
+```
