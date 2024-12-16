@@ -65,7 +65,7 @@ volumes:
 
 1. Кажется, кто-то забыл/не подумал, что могут быть разные версии nginx и mysql... так не делаем, нужно указать конкретную, чтобы избежать неприятных сюрпризов в поведении приложений при обновлении образов. Запомним: надо указать версии в хорошем docker compose.
 
-![а-ой](https://github.com/paltovkletku/babaiki_devops_clouds/tree/main/DevOps/Lab2*/media)
+![а-ой](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C.jpg)
 
 о чем это мы?... да, у нас проблемы с безопасностью...
 
