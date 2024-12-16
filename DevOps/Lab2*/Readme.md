@@ -14,6 +14,8 @@
 
 ![установка](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B0.jpg)
 
+### Плохой docker compose
+
 Сначала сделаем, а потом подумаем, что натворили (пишем плохой docker compose)
 
 ```
@@ -61,6 +63,8 @@ volumes:
 
 ![остановка плохого](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BB%D0%BE%D1%85%D0%BE%D0%B3%D0%BE.jpg) 
 
+### Анализ плохихи практик
+
 Самое время подумать, что было не так...
 
 1. Кажется, кто-то забыл/не подумал, что могут быть разные версии nginx и mysql... так не делаем, нужно указать конкретную, чтобы избежать неприятных сюрпризов в поведении приложений при обновлении образов.
@@ -97,6 +101,8 @@ secrets:
   mysql_user_password:
     file: ./secrets/mysql_user_password.txt
 ```
+
+### Хороший docker compose
 
 А теперь, оглядываясь на все недочеты и предложения по исправлению, пишем хороший docker compose:
 
@@ -152,7 +158,7 @@ secrets:
 
 ![запуск плохого](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B5%D0%B3%D0%BE(1).jpg)
 
-
+### Изоляция сервисов
 
 Сейчас давайте вернемся к вопросу об изоляции
 
