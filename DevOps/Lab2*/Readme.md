@@ -148,5 +148,5 @@ secrets:
 
 Таким образом, изоляция сервисов позволяет избежать конфликтов и нежелательных взаимодействий.
 
-![final_meme](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C.jpg))
+![final_meme](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BC%D1%8B%20%D0%B8%20%D0%BB%D0%B0%D0%B1%D0%B0.jpg)
 
