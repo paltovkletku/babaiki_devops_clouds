@@ -16,32 +16,23 @@
 
 ### Плохой docker compose
 
-Сначала сделаем, а потом подумаем, что натворили (пишем плохой docker compose)
+Сначала сделаем, а потом подумаем, что натворили (пишем плохой docker compose, у нас он поднимает nginx и MySQL)
 
 ```
 services:
   web:
     image: nginx
     ports:
-      - "80:80"
-    environment:
-      - NGINX_HOST=localhost
-      - NGINX_PORT=80
+      - "8000:80"
 
   db:
     image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mydb
+      MYSQL_ROOT_PASSWORD: "root"
       MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: "password"
     ports:
       - "3306:3306"
-
-  cache:
-    image: redis
-    ports:
-      - "6379:6379"
 
 ```
 
@@ -69,8 +60,8 @@ services:
 
 о чем это мы?.. да, у нас проблемы с безопасностью...
 
-2. Наши сервисы имеют открытые порты. Получаем минус безопасность (= минус вайб), а еще возможность возникновения конфликтов портов.
-   Чтобы такое решить, изменим порт nginx на 80, чтобы избежать конфликта с другими сервисами
+2. Наши сервисы имеют открытые порты, то есть они доступны всем устройствам в сети. Получаем минус безопасность (= минус вайб), а еще возможность возникновения конфликтов портов.
+   Привяжем порты к локальному хосту.
 
 3. Так-с, а изолировать сети кто будет?.. Да, этого мы пока не сделали, чем это нам грозит? Наши сервисы находятся в одной сети по умолчанию, что может привести к нежелательному взаимодействию между ними.
   
@@ -107,32 +98,30 @@ services:
   web:
     image: nginx:1.21
     ports:
-      - "8080:80"
-    environment:
-      NGINX_HOST: localhost
-      NGINX_PORT: 80
+      - "127.0.0.1:8000:80"
+    networks:
+      - web_network
 
   db:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
-      MYSQL_DATABASE: mydb
       MYSQL_USER: user
       MYSQL_PASSWORD_FILE: /run/secrets/mysql_user_password
     networks:
       - db_network
+    ports:
+      - "127.0.0.1:3306:3306"
     secrets:
       - mysql_root_password
       - mysql_user_password
 
-  cache:
-    image: redis:alpine
-    networks:
-      - cache_network
 
 networks:
   db_network:
-  cache_network:
+    driver: bridge
+  web_network:
+    driver: bridge
 
 secrets:
   mysql_root_password:
@@ -144,19 +133,19 @@ secrets:
 
 Запускаем:
 
-![запуск плохого1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)1.jpg)
+![запуск хорошего1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)1.jpg)
 
-![запуск плохого2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)2.jpg)
+![запуск хорошего2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)2.jpg)
 
-![запуск плохого3](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)3.jpg)
+![запуск хорошего3](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)3.jpg)
 
 Спасибо, останавливаемся
 
-![запуск плохого](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B5%D0%B3%D0%BE(1).jpg)
+![стоп хорошего](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B5%D0%B3%D0%BE(1).jpg)
 
 ### Изоляция сервисов
 
-Сейчас давайте вернемся к вопросу об изоляции
+Сейчас вернемся к вопросу об изоляции.
 
 У нас была проблема: сервисы находились в одной сети (по умолчанию). Так сервисы могут взаимодействовать друг с другом, а нам бы такого не хотелось.
 
