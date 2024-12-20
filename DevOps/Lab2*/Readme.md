@@ -39,15 +39,12 @@ services:
 
 А теперь запускаем (много букв):
 
-![запуск плохого1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B8%20%D0%BF%D0%BB%D0%BE%D1%85%D0%BE%D0%B9%20-%20%D0%BB%D0%BE%D0%B3%D0%B81.jpg)
+![запуск плохого1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/bad_on)
 
-![запуск плохого2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BB%D0%BE%D0%B3%D0%B82.jpg)
 
-![запуск плохого3](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BB%D0%BE%D0%B3%D0%B83.jpg)
+Страшно, вырубаем...
 
-Посмотрели, останавливаем это чудище:
-
-![остановка плохого](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BB%D0%BE%D1%85%D0%BE%D0%B3%D0%BE.jpg) 
+![остановка плохого](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/bad_off)
 
 ### Анализ плохихи практик
 
@@ -61,7 +58,7 @@ services:
 
 о чем это мы?.. да, у нас проблемы с безопасностью...
 
-2. Наши сервисы имеют открытые порты, то есть они доступны всем устройствам в сети. Получаем минус безопасность (= минус вайб), а еще возможность возникновения конфликтов портов.
+2. Наши сервисы имеют открытые порты, то есть они доступны всем устройствам в сети. Получаем минус безопасность (= минус вайб).
    Привяжем порты к локальному хосту.
 
 3. Так-с, а изолировать сети кто будет?.. Да, этого мы пока не сделали, чем это нам грозит? Наши сервисы находятся в одной сети по умолчанию, что может привести к нежелательному взаимодействию между ними.
@@ -135,15 +132,8 @@ secrets:
 
 Запускаем:
 
-![запуск хорошего1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)1.jpg)
+![запуск хорошего1](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/good_on)
 
-![запуск хорошего2](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)2.jpg)
-
-![запуск хорошего3](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B8%D0%B9(1)3.jpg)
-
-Спасибо, останавливаемся
-
-![стоп хорошего](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D1%85%D0%BE%D1%80%D0%BE%D1%88%D0%B5%D0%B3%D0%BE(1).jpg)
 
 ### Изоляция сервисов
 
