@@ -29,6 +29,7 @@ services:
     image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: my_db
       MYSQL_USER: user
       MYSQL_PASSWORD: "password"
     ports:
@@ -73,9 +74,9 @@ services:
 
 4. Для хранения конфиденциальной информации будем использовать docker secrets
 
-Хранить пароли просто в файлах, конечно, хочется, но не стоит. Docker Compose позволяет использовать секреты без необходимости хранить информацию в переменных окружения.
+Хранить пароли от рута и пользователя user базы данных просто в файлах, конечно, очень хочется, но не стоит. Docker Compose позволяет использовать секреты без необходимости хранить информацию в переменных окружения.
 
-Создаем файлы для хранения секретов
+Сразу создадим файлы для хранения секретов и запишем туда пароли. Будем надеяться, что файлы лежат в достаточно надежном месте (в руте =)).
 
 ![файл](https://github.com/paltovkletku/babaiki_devops_clouds/blob/main/DevOps/Lab2*/media/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82%D1%8B-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE.jpg)
 
@@ -106,6 +107,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+      MYSQL_DATABSE: my_db
       MYSQL_USER: user
       MYSQL_PASSWORD_FILE: /run/secrets/mysql_user_password
     networks:
